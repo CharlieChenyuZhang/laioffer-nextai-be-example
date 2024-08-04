@@ -25,6 +25,10 @@ const PORT = 5001;
 
 let filePath;
 
+app.get("/", (req, res) => {
+  res.send("healthy");
+});
+
 app.post("/upload", upload.single("file"), (req, res) => {
   // Use multer to handle file upload
   filePath = req.file.path; // The path where the file is temporarily saved
