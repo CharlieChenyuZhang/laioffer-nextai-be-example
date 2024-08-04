@@ -21,7 +21,7 @@ const storage = multer.diskStorage({
 
 const upload = multer({ storage: storage });
 
-const PORT = 5001;
+const PORT = 5001 | process.env.PORT;;
 
 let filePath;
 
